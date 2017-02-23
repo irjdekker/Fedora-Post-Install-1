@@ -10,6 +10,7 @@
 #### UPDATE ####
 # Update current settings and package listings
 sudo dnf update
+sudo dnf upgrade
 
 #### RPM FUSION REPO ####
 # Add rpmfusion and update package listings 
