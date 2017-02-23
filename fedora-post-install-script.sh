@@ -84,3 +84,35 @@ sudo tar -C /usr/local -xzf go*.tar.gz
 sudo bash -c "echo 'export PATH=\$PATH:/usr/local/go/bin' >> /etc/profile.d/custom.sh"
 # Check installation is successful with "$ go version"
 
+#### FONTS ####
+# Download font families from https://fonts.google.com
+# Roboto [Mono] - Apache 2.0 License
+# Lato - Open Font License
+# Raleway - Open Font License
+unzip fonts.zip
+# Noto (No More Tofu from Google) Sans, Serif, and Mono (All languages) from: 
+# https://www.google.com/get/noto/
+unzip NotoMono*.zip -d NotoMono
+unzip NotoSans*.zip -d NotoSans
+unzip NotoSerif*.zip -d NotoSerif
+# Move fonts so all users can use
+sudo mkdir -p /usr/share/fonts/opentype/Lato
+sudo mkdir -p /usr/share/fonts/opentype/NotoMono
+sudo mkdir -p /usr/share/fonts/opentype/NotoSans
+sudo mkdir -p /usr/share/fonts/opentype/NotoSerif
+sudo mkdir -p /usr/share/fonts/opentype/Raleway
+sudo mkdir -p /usr/share/fonts/opentype/Roboto
+sudo mkdir -p /usr/share/fonts/opentype/Roboto_Mono
+sudo cp ~/Downloads/Lato/*ttf /usr/share/fonts/opentype/Lato
+sudo cp ~/Downloads/NotoMono/*ttf /usr/share/fonts/opentype/NotoMono
+sudo cp ~/Downloads/NotoSans/*ttf /usr/share/fonts/opentype/NotoSans
+sudo cp ~/Downloads/NotoSerif/*ttf /usr/share/fonts/opentype/NotoSerif
+sudo cp ~/Downloads/Raleway/*ttf /usr/share/fonts/opentype/Raleway
+sudo cp ~/Downloads/Roboto/*ttf /usr/share/fonts/opentype/Roboto
+sudo cp ~/Downloads/Roboto_Mono/*ttf /usr/share/fonts/opentype/Roboto_Mono
+# Refresh font cache (Optional)
+sudo fc-cache -f -v
+
+
+
+
