@@ -64,6 +64,7 @@ sudo cp -r /opt/sublime_text_3/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/
 sudo cp -r /opt/sublime_text_3/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/
 sudo cp -r /opt/sublime_text_3/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
 # Enter purchase license stored in Enpass
+# User preferences on Github
 
 #### GOOGLE CHROME BROWSER ####
 # Download Google Chrome Browser from https://www.google.com/chrome/browser/desktop/index.html
@@ -113,6 +114,16 @@ sudo cp ~/Downloads/Roboto_Mono/*ttf /usr/share/fonts/opentype/Roboto_Mono
 # Refresh font cache (Optional)
 sudo fc-cache -f -v
 
+#### 7ZIP ####
+sudo dnf install -y p7zip
 
+#### WALLPAPER(S) ####
+# Original Heavy Metal Pack - http://elddes.deviantart.com/gallery/
+# Move the file to the Pictures folder in the Home Directory
+# Set the background from the Settings -> Background
+
+#### CONKY ####
+sudo dnf install -y conky lm_sensors hddtemp
+# Original Tree-Conky configuration files from https://github.com/N2f3/Tree-Conky
 
 
