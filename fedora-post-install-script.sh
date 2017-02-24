@@ -11,13 +11,13 @@
 # Update current settings and package listings
 sudo dnf upgrade
 
-#### RPM FUSION REPO ####
-# Add rpmfusion and update package listings 
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
 #### DEVELOPMENT TOOLS ####
 # Install Kernel Development tools and packages
 sudo dnf install -y kernel-devel
+
+#### RPM FUSION REPO ####
+# Add rpmfusion needed for some proprietary drivers
+# sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 #### BROADCOM WIRELESS ####
 # Install Wireless packages
