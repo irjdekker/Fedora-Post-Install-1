@@ -130,4 +130,8 @@ sudo dnf install -y gnome-tweak-tool
 sudo dnf install -y conky lm_sensors hddtemp
 # Original Tree-Conky configuration files from https://github.com/N2f3/Tree-Conky
 
-
+#### NEOFETCH ####
+# Enable COPR repository
+sudo dnf copr enable konimex/neofetch
+# Install neofetch
+sudo dnf install -y neofetch
