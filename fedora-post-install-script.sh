@@ -9,13 +9,11 @@
 
 #### UPDATE ####
 # Update current settings and package listings
-sudo dnf update
 sudo dnf upgrade
 
 #### RPM FUSION REPO ####
 # Add rpmfusion and update package listings 
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf update
 
 #### DEVELOPMENT TOOLS ####
 # Install Kernel Development tools and packages
@@ -30,6 +28,7 @@ sudo dnf install -y kernel-devel
 #### USER DEFINED ALIASES ####
 # Append user specific aliases
 echo "alias ll='ls -laFh'">> ~/.bashrc
+source ~/.bashrc
 
 #### VIM ####
 # Install Vim
@@ -53,16 +52,16 @@ cd ~/Downloads/
 # Extract the tar ball
 tar -xjvf sublime_text_3*.tar.bz2
 # Move the extracted folder to a more appropriate location
-sudo mv sublime_text_3 /opt/
+sudo mv sublime_text_3 /opt/sublime_text
 # Create symbolic links
-sudo ln -s /opt/sublime_text_3/sublime_text /usr/bin/sublime
-sudo ln -s /opt/sublime_text_3/sublime_text.desktop /usr/share/applications/sublime_text.desktop
+sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
+sudo ln -s /opt/sublime_text/sublime_text.desktop /usr/share/applications/sublime_text.desktop
 # Need to edit the .desktop file to fix the line to read "Exec=/opt/sublime_text_3/sublime_text" in potentially multiple spots
-sudo cp -r /opt/sublime_text_3/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/
-sudo cp -r /opt/sublime_text_3/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/
-sudo cp -r /opt/sublime_text_3/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/
-sudo cp -r /opt/sublime_text_3/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/
-sudo cp -r /opt/sublime_text_3/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
+sudo cp -r /opt/sublime_text/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/
+sudo cp -r /opt/sublime_text/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/
+sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/
+sudo cp -r /opt/sublime_text/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/
+sudo cp -r /opt/sublime_text/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
 # Enter purchase license stored in Enpass
 # User preferences on Github
 
