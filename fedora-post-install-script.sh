@@ -82,6 +82,7 @@ sudo rpm -i slack*.rpm
 sudo tar -C /usr/local -xzf go*.tar.gz
 # Add go bin to PATH
 sudo bash -c "echo 'export PATH=\$PATH:/usr/local/go/bin' >> /etc/profile.d/custom.sh"
+# Will require either a source or restart
 # Check installation is successful with "$ go version"
 
 #### FONTS ####
