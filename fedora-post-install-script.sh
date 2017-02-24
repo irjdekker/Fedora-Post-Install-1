@@ -9,7 +9,7 @@
 
 #### UPDATE ####
 # Update current settings and package listings
-sudo dnf upgrade
+sudo dnf upgrade # (update is deprecated)
 
 #### DEVELOPMENT TOOLS ####
 # Install Kernel Development tools and packages
@@ -56,7 +56,7 @@ sudo mv sublime_text_3 /opt/sublime_text
 # Create symbolic links
 sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
 sudo ln -s /opt/sublime_text/sublime_text.desktop /usr/share/applications/sublime_text.desktop
-# Need to edit the .desktop file to fix the line to read "Exec=/opt/sublime_text_3/sublime_text" in potentially multiple spots
+# Ensure the .desktop file lines read "Exec=/opt/sublime_text/sublime_text" in potentially multiple spots
 sudo cp -r /opt/sublime_text/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/ &&\
 sudo cp -r /opt/sublime_text/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/ &&\
 sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/ &&\
@@ -114,7 +114,7 @@ sudo cp ~/Downloads/Roboto_Mono/*ttf /usr/share/fonts/opentype/Roboto_Mono
 sudo fc-cache -f -v
 
 #### 7ZIP ####
-sudo dnf install -y p7zip
+# sudo dnf install -y p7zip
 
 #### WALLPAPER(S) ####
 # Original Heavy Metal Pack - http://elddes.deviantart.com/gallery/
@@ -124,6 +124,7 @@ sudo dnf install -y p7zip
 #### GNOME TWEAK TOOL ####
 # Necessary for settings such as fonts, start up programs and more
 sudo dnf install -y gnome-tweak-tool
+# TOP BAR: x Show Date, x Show Seconds, x Show Week Numbers
 
 #### CONKY ####
 sudo dnf install -y conky lm_sensors hddtemp
