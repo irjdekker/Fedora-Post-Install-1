@@ -57,10 +57,10 @@ sudo mv sublime_text_3 /opt/sublime_text
 sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
 sudo ln -s /opt/sublime_text/sublime_text.desktop /usr/share/applications/sublime_text.desktop
 # Need to edit the .desktop file to fix the line to read "Exec=/opt/sublime_text_3/sublime_text" in potentially multiple spots
-sudo cp -r /opt/sublime_text/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/
-sudo cp -r /opt/sublime_text/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/
-sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/
-sudo cp -r /opt/sublime_text/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/
+sudo cp -r /opt/sublime_text/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/ &&\
+sudo cp -r /opt/sublime_text/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/ &&\
+sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/ &&\
+sudo cp -r /opt/sublime_text/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/ &&\
 sudo cp -r /opt/sublime_text/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
 # Enter purchase license stored in Enpass
 # User preferences on Github
@@ -96,19 +96,19 @@ unzip NotoMono*.zip -d NotoMono
 unzip NotoSans*.zip -d NotoSans
 unzip NotoSerif*.zip -d NotoSerif
 # Move fonts so all users can use
-sudo mkdir -p /usr/share/fonts/opentype/Lato
-sudo mkdir -p /usr/share/fonts/opentype/NotoMono
-sudo mkdir -p /usr/share/fonts/opentype/NotoSans
-sudo mkdir -p /usr/share/fonts/opentype/NotoSerif
-sudo mkdir -p /usr/share/fonts/opentype/Raleway
-sudo mkdir -p /usr/share/fonts/opentype/Roboto
+sudo mkdir -p /usr/share/fonts/opentype/Lato &&\
+sudo mkdir -p /usr/share/fonts/opentype/NotoMono &&\
+sudo mkdir -p /usr/share/fonts/opentype/NotoSans &&\
+sudo mkdir -p /usr/share/fonts/opentype/NotoSerif &&\
+sudo mkdir -p /usr/share/fonts/opentype/Raleway &&\
+sudo mkdir -p /usr/share/fonts/opentype/Roboto &&\
 sudo mkdir -p /usr/share/fonts/opentype/Roboto_Mono
-sudo cp ~/Downloads/Lato/*ttf /usr/share/fonts/opentype/Lato
-sudo cp ~/Downloads/NotoMono/*ttf /usr/share/fonts/opentype/NotoMono
-sudo cp ~/Downloads/NotoSans/*ttf /usr/share/fonts/opentype/NotoSans
-sudo cp ~/Downloads/NotoSerif/*ttf /usr/share/fonts/opentype/NotoSerif
-sudo cp ~/Downloads/Raleway/*ttf /usr/share/fonts/opentype/Raleway
-sudo cp ~/Downloads/Roboto/*ttf /usr/share/fonts/opentype/Roboto
+sudo cp ~/Downloads/Lato/*ttf /usr/share/fonts/opentype/Lato &&\
+sudo cp ~/Downloads/NotoMono/*ttf /usr/share/fonts/opentype/NotoMono &&\
+sudo cp ~/Downloads/NotoSans/*ttf /usr/share/fonts/opentype/NotoSans &&\
+sudo cp ~/Downloads/NotoSerif/*ttf /usr/share/fonts/opentype/NotoSerif &&\
+sudo cp ~/Downloads/Raleway/*ttf /usr/share/fonts/opentype/Raleway &&\
+sudo cp ~/Downloads/Roboto/*ttf /usr/share/fonts/opentype/Roboto &&\
 sudo cp ~/Downloads/Roboto_Mono/*ttf /usr/share/fonts/opentype/Roboto_Mono
 # Refresh font cache (Optional)
 sudo fc-cache -f -v
