@@ -122,6 +122,10 @@ sudo dnf install -y p7zip
 # Move the file to the Pictures folder in the Home Directory
 # Set the background from the Settings -> Background
 
+#### GNOME TWEAK TOOL ####
+# Necessary for settings such as fonts, start up programs and more
+sudo dnf install -y gnome-tweak-tool
+
 #### CONKY ####
 sudo dnf install -y conky lm_sensors hddtemp
 # Original Tree-Conky configuration files from https://github.com/N2f3/Tree-Conky
