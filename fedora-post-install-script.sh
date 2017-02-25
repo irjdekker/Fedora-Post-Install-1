@@ -15,6 +15,11 @@ sudo dnf upgrade # (update is deprecated)
 # Install Kernel Development tools and packages
 sudo dnf install -y kernel-devel
 
+#### FIREFOX ####
+# Preinstalled, but needs settings tweaks
+# Sign in with account to get privacy extensions, bookmarks, and settings
+# Change default search engine to DuckDuckGo
+
 #### RPM FUSION REPO ####
 # Add rpmfusion needed for some proprietary drivers,
 # media codecs, and third party applications (e.g. VLC)
@@ -126,7 +131,8 @@ sudo fc-cache -f -v
 #### GNOME TWEAK TOOL ####
 # Necessary for settings such as fonts, start up programs and more
 sudo dnf install -y gnome-tweak-tool
-# TOP BAR: x Show Date, x Show Seconds, x Show Week Numbers
+# TOP BAR: Show Date = On, Show Seconds = On, Show Week Numbers = On
+# WINDOWS: Titlebar Buttons - Maximize = On, Minimize = On
 
 #### CONKY ####
 sudo dnf install -y conky lm_sensors hddtemp
