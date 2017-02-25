@@ -16,8 +16,9 @@ sudo dnf upgrade # (update is deprecated)
 sudo dnf install -y kernel-devel
 
 #### RPM FUSION REPO ####
-# Add rpmfusion needed for some proprietary drivers
-# sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# Add rpmfusion needed for some proprietary drivers,
+# media codecs, and third party applications (e.g. VLC)
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 #### BROADCOM WIRELESS ####
 # Install Wireless packages
@@ -136,3 +137,7 @@ sudo dnf install -y conky lm_sensors hddtemp
 sudo dnf copr enable konimex/neofetch
 # Install neofetch
 sudo dnf install -y neofetch
+
+#### VLC ####
+# Be sure RPMFusion was enabled before
+sudo dnf install -y vlc
