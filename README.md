@@ -10,3 +10,5 @@ Fix / Finalize Conky
 Bumblebee? Nvidia outright?
 
 Rework the script from simple list into interactive process
+
+PATH seems to be added twice for GO section

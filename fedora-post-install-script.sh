@@ -69,6 +69,7 @@ sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/ &
 sudo cp -r /opt/sublime_text/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/ &&\
 sudo cp -r /opt/sublime_text/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
 # Enter purchase license stored in Enpass
+# Install Package Control from https://packagecontrol.io/
 # User preferences on Github
 
 #### GOOGLE CHROME BROWSER ####
@@ -87,9 +88,29 @@ sudo rpm -i slack*.rpm
 # Download GoLang from https://golang.org/dl/
 sudo tar -C /usr/local -xzf go*.tar.gz
 # Add go bin to PATH
-sudo bash -c "echo 'export PATH=\$PATH:/usr/local/go/bin' >> /etc/profile.d/custom.sh"
+
+# Create a file to store custom variables
+sudo touch custom.sh
+# Add the following (without the quotes)
+
+"
+# Set GOROOT
+export GOROOT=/usr/local/go/bin
+export PATH=$PATH:$GOROOT
+
+# Create GO project folder
+mkdir $HOME/go # We don't need to worry about clobber
+
+# While GOPATH isn't necessary for go 1.8 and beyond,
+# many tools are still anticipating the env var
+export GOPATH=$HOME/kyrodin/go
+export PATH=$PATH:$GOPATH
+"
+
 # Will require either a source or restart
 # Check installation is successful with "$ go version"
+# Install GoSublime. CTRL/CMD + SHFT + P => 'install' => GoSublime
+# GoSublime still requres the GOPATH variable
 
 #### FONTS ####
 # Download font families from https://fonts.google.com
