@@ -95,8 +95,8 @@ sudo touch custom.sh
 
 "
 # Set GOROOT
-export GOROOT=/usr/local/go/bin
-export PATH=$PATH:$GOROOT
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 
 # Create GO project folder
 mkdir $HOME/go # We don't need to worry about clobber
