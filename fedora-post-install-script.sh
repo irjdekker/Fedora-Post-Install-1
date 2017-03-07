@@ -173,9 +173,30 @@ sudo dnf install -y vlc
 # From https://fedoraproject.org/wiki/Features/NodeJS
 sudo dnf install -y nodejs npm nodejs-mkdirp
 # Test NodeJS installation
+node --version
 mkdir $HOME/tmp
 touch $HOME/tmp/delme.js
 echo 'console.log("Hello World");' > $HOME/tmp/delme.js
 node $HOME/tmp/delme.js
 # Test npm rpm package exploration, should see version
 npm list -g | grep mkdirp
+
+#### Gulp ####
+# To be able to install npm packages without sudo
+# https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+mkdir "${HOME}/.npm-packages"
+echo "prefix=${HOME}/.npm-packages" > $HOME/.npmrc
+echo 'NPM_PACKAGES="${HOME}/.npm-packages' >> $HOME/.bash_profile
+echo 'PATH="$PATH:$NPM_PACKAGES:bin"' >> $HOME/.bash_profile
+# Ensure that any previous 'export PATH' lines are at the end of the file
+source $HOME/.bash_profile
+# Can alternatively utilize sudo
+npm install gulp-cli -g
+npm install gulp -D
+# Test installation
+gulp -v
+
+#### Babel ####
+# Babel JS 'compiler' to integrate new JS features
+npm install --save-dev babel-cli babel-preset-env babel-register
+
