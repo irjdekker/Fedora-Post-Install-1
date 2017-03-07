@@ -168,3 +168,14 @@ sudo dnf install -y neofetch
 #### VLC ####
 # Be sure RPMFusion was enabled before
 sudo dnf install -y vlc
+
+#### NodeJS / NPM ####
+# From https://fedoraproject.org/wiki/Features/NodeJS
+sudo dnf install -y nodejs npm nodejs-mkdirp
+# Test NodeJS installation
+mkdir $HOME/tmp
+touch $HOME/tmp/delme.js
+echo 'console.log("Hello World");' > $HOME/tmp/delme.js
+node $HOME/tmp/delme.js
+# Test npm rpm package exploration, should see version
+npm list -g | grep mkdirp
