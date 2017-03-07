@@ -200,3 +200,9 @@ gulp -v
 # Babel JS 'compiler' to integrate new JS features
 npm install --save-dev babel-cli babel-preset-env babel-register
 
+#### Hugo ####
+# Hugo static website generator
+# If Go still needs some setup: $ mkdir $HOME/go
+# If the GOPATH needs to be set: $ export GOPATH=$HOME/go
+# Assuming the GOPATH is set and working correctly
+go get -v github.com/spf13/hugo
