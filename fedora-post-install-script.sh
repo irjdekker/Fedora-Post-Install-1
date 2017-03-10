@@ -91,21 +91,8 @@ sudo tar -C /usr/local -xzf go*.tar.gz
 
 # Create a file to store custom variables
 sudo touch custom.sh
-# Add the following (without the quotes)
-
-"
-# Set GOROOT
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-
-# Create GO project folder
-mkdir $HOME/go # We don't need to worry about clobber
-
-# While GOPATH isn't necessary for go 1.8 and beyond,
-# many tools are still anticipating the env var
-export GOPATH=$HOME/kyrodin/go
-export PATH=$PATH:$GOPATH
-"
+# Add the following path declaration to the profile
+echo 'export PATH=\$PATH:/usr/local/go/bin' >> $HOME/.bash_profile
 
 # Will require either a source or restart
 # Check installation is successful with "$ go version"
