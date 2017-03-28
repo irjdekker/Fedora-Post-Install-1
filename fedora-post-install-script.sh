@@ -193,3 +193,4 @@ npm install --save-dev babel-cli babel-preset-env babel-register
 # If the GOPATH needs to be set: $ export GOPATH=$HOME/go
 # Assuming the GOPATH is set and working correctly
 go get -v github.com/spf13/hugo
+# Ensure the $HOME/go/bin is part of the $PATH in the .bash_profile
