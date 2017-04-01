@@ -196,7 +196,8 @@ npm install --save-dev babel-cli babel-preset-env babel-register
 go get -v github.com/spf13/hugo
 # Ensure the $HOME/go/bin is part of the $PATH in the .bash_profile
 
-#### GIMP ####
+#### GIMP: Raster image processing ####
 sudo dnf install -y gimp
 
-
+#### INKSCAPE: Vector image processing ####
+sudo dnf install -y inkscape
