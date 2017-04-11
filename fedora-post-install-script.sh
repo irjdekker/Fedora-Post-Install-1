@@ -201,3 +201,11 @@ sudo dnf install -y gimp
 
 #### INKSCAPE: Vector image processing ####
 sudo dnf install -y inkscape
+
+#### VIRTUALBOX (ORACLE) ####
+# Download the RPM from https://www.virtualbox.org/wiki/Linux_Downloads
+# Download the Oracle public key as specified on the download page
+sudo rpm --import oracle_vbox.asc
+rpm --checksig <VirtualBox package download name>
+# If checksig is OK then
+sudo rpm -i <VirtualBox package download name>
