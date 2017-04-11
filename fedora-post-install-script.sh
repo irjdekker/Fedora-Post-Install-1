@@ -71,6 +71,7 @@ sudo cp -r /opt/sublime_text/Icon/256x256/* /usr/share/icons/hicolor/256x256/app
 # Enter purchase license stored in Enpass
 # Install Package Control from https://packagecontrol.io/
 # User preferences on Github
+# Install TOML package
 
 #### GOOGLE CHROME BROWSER ####
 # Download Google Chrome Browser from https://www.google.com/chrome/browser/desktop/index.html
@@ -193,3 +194,10 @@ npm install --save-dev babel-cli babel-preset-env babel-register
 # If the GOPATH needs to be set: $ export GOPATH=$HOME/go
 # Assuming the GOPATH is set and working correctly
 go get -v github.com/spf13/hugo
+# Ensure the $HOME/go/bin is part of the $PATH in the .bash_profile
+
+#### GIMP: Raster image processing ####
+sudo dnf install -y gimp
+
+#### INKSCAPE: Vector image processing ####
+sudo dnf install -y inkscape
