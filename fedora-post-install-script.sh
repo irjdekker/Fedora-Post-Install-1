@@ -209,3 +209,36 @@ sudo rpm --import oracle_vbox.asc
 rpm --checksig <VirtualBox package download name>
 # If checksig is OK then
 sudo rpm -i <VirtualBox package download name>
+
+#### SPOTIFY ####
+# Spotify only packages an official client for Ubuntu LTS. To add a 
+# repo for Fedora, it must be an external repo or a Flatpak. Below is
+# the external:
+sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-spotify.repo
+sudo dnf install -y spotify-client
+
+#### POSTGRESQL ####
+# This is taken nearly directly off the Fedora Wiki:
+# https://fedoraproject.org/wiki/PostgreSQL
+# Installation:
+sudo dnf install -y postgresql-server postgresql-contrib
+# Enable and [auto-]start
+sudo systemctl enable postgresql
+# The following will likely cause an error. Postgres needs to be configured first.
+sudo systemctl start postgresql
+# Initial configuration
+sudo postgresql-setup --initdb --unit postgresql
+# Switch to root
+sudo su
+# Once root, then switch to the postgres user
+su - postgres
+# start psql
+psql
+# add a password to the postgres user
+\password postgres
+# enter a new password (for example, "development")
+# Create a user in Postgres (based on the UseGoLang.com in this case)
+CREATE USER usegolang WITH PASSWORD 'usegolang';
+CREATE DATABASE usegolang OWNER usegolang;
+# There is quite a bit more information at the Fedora wiki and certainly
+# more information with Postgres own docs
