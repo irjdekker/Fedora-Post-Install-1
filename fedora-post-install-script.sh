@@ -242,3 +242,23 @@ CREATE USER usegolang WITH PASSWORD 'usegolang';
 CREATE DATABASE usegolang OWNER usegolang;
 # There is quite a bit more information at the Fedora wiki and certainly
 # more information with Postgres own docs
+
+
+#### Docker CE ####
+sudo dnf install -y dnf-plugins-core # Needed for managing DNF repositories from the CLI
+
+# Add Docker CE stable repo
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
+# Refresh DNF cache to accept GPG key for new repo
+sudo dnf makecache fast
+
+# Install Docker CE
+sudo dnf install docker-ce
+
+# Start Docker
+sudo systemctl start docker
+
+# Verify installation
+sudo docker run hello-world
+# Alternatively/Additionally run docker --version
