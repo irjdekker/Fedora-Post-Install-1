@@ -13,7 +13,7 @@ sudo dnf upgrade # (update is deprecated)
 
 #### DEVELOPMENT TOOLS ####
 # Install Kernel Development tools and packages
-sudo dnf install -y kernel-devel
+sudo dnf install -y kernel-devel kernel-headers
 
 #### FIREFOX ####
 # Preinstalled, but needs settings tweaks
@@ -53,6 +53,11 @@ cd ~
 # IdleTimeValue=10
 
 #### SUBLIME TEXT 3 ####
+#Instructions can be fournd at: https://www.sublimetext.com/docs/3/linux_repositories.html
+sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+
+#NOTE: Previous instructions:
 # Download Sublime_Text_3 from https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
 cd ~/Downloads/
 # Extract the tar ball
