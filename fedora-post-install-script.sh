@@ -59,20 +59,20 @@ sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x
 
 #NOTE: Previous instructions:
 # Download Sublime_Text_3 from https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
-cd ~/Downloads/
+#cd ~/Downloads/
 # Extract the tar ball
-tar -xjvf sublime_text_3*.tar.bz2
+#tar -xjvf sublime_text_3*.tar.bz2
 # Move the extracted folder to a more appropriate location
-sudo mv sublime_text_3 /opt/sublime_text
+#sudo mv sublime_text_3 /opt/sublime_text
 # Create symbolic links
-sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
-sudo ln -s /opt/sublime_text/sublime_text.desktop /usr/share/applications/sublime_text.desktop
+#sudo ln -s /opt/sublime_text/sublime_text /usr/bin/sublime
+#sudo ln -s /opt/sublime_text/sublime_text.desktop /usr/share/applications/sublime_text.desktop
 # Ensure the .desktop file lines read "Exec=/opt/sublime_text/sublime_text" in potentially multiple spots
-sudo cp -r /opt/sublime_text/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/ &&\
-sudo cp -r /opt/sublime_text/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/ &&\
-sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/ &&\
-sudo cp -r /opt/sublime_text/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/ &&\
-sudo cp -r /opt/sublime_text/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
+#sudo cp -r /opt/sublime_text/Icon/16x16/* /usr/share/icons/hicolor/16x16/apps/ &&\
+#sudo cp -r /opt/sublime_text/Icon/32x32/* /usr/share/icons/hicolor/32x32/apps/ &&\
+#sudo cp -r /opt/sublime_text/Icon/48x48/* /usr/share/icons/hicolor/48x48/apps/ &&\
+#sudo cp -r /opt/sublime_text/Icon/128x128/* /usr/share/icons/hicolor/128x128/apps/ &&\
+#sudo cp -r /opt/sublime_text/Icon/256x256/* /usr/share/icons/hicolor/256x256/apps/
 # Enter purchase license stored in Enpass
 # Install Package Control from https://packagecontrol.io/
 # User preferences on Github
