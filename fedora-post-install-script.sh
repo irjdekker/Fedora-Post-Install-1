@@ -33,7 +33,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 
 #### USER DEFINED ALIASES ####
 # Append user specific aliases
-echo "alias ll='ls -laFh'">> ~/.bashrc
+echo "alias ll='ls -lAFh'">> ~/.bashrc
 source ~/.bashrc
 
 #### VIM ####
