@@ -267,3 +267,17 @@ sudo systemctl start docker
 # Verify installation
 sudo docker run hello-world
 # Alternatively/Additionally run docker --version
+
+##### GNOME #####
+# Extensions:
+# Install Browser Extension for Chrome (Visit extensions.gnome.org and you will be prompted)
+# Install "native host connector"
+sudo dnf copr enable region51/chrome-gnome-shell
+sudo dnf install -y chrome-gnome-shell
+# [ ] Turn off Fedora label
+# [X] Applications Menu
+# [X] Window List
+# 
+
+
+
