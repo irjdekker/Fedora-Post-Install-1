@@ -95,14 +95,10 @@ sudo rpm -i slack*.rpm
 sudo tar -C /usr/local -xzf go*.tar.gz
 # Add go bin to PATH
 # $PATH:/usr/local/go/bin
-
-# Create a file to store custom variables
-#sudo touch custom.sh
-# Add the following path declaration to the profile
-#echo 'export PATH=\$PATH:/usr/local/go/bin' >> $HOME/.bash_profile
-
 # Will require either a source or restart
 # Check installation is successful with "$ go version"
+
+### GO + Sublime (Although I've switched to Goglang / Intellij)
 # Install GoSublime. CTRL/CMD + SHFT + P => 'install' => GoSublime
 # GoSublime still requres the GOPATH variable
 
@@ -252,19 +248,14 @@ CREATE DATABASE usegolang OWNER usegolang;
 
 #### Docker CE ####
 sudo dnf install -y dnf-plugins-core # Needed for managing DNF repositories from the CLI
-
 # Add Docker CE stable repo
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-
 # Refresh DNF cache to accept GPG key for new repo
 sudo dnf makecache fast
-
 # Install Docker CE
 sudo dnf install docker-ce
-
 # Start Docker
 sudo systemctl start docker
-
 # Verify installation
 sudo docker run hello-world
 # Alternatively/Additionally run docker --version
