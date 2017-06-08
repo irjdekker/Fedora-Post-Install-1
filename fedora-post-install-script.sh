@@ -94,11 +94,12 @@ sudo rpm -i slack*.rpm
 # Download GoLang from https://golang.org/dl/
 sudo tar -C /usr/local -xzf go*.tar.gz
 # Add go bin to PATH
+# $PATH:/usr/local/go/bin
 
 # Create a file to store custom variables
-sudo touch custom.sh
+#sudo touch custom.sh
 # Add the following path declaration to the profile
-echo 'export PATH=\$PATH:/usr/local/go/bin' >> $HOME/.bash_profile
+#echo 'export PATH=\$PATH:/usr/local/go/bin' >> $HOME/.bash_profile
 
 # Will require either a source or restart
 # Check installation is successful with "$ go version"
@@ -277,7 +278,9 @@ sudo dnf install -y chrome-gnome-shell
 # [ ] Turn off Fedora label
 # [X] Applications Menu
 # [X] Window List
-# 
+# [X] Dash to Dock
+# [X] Impatience
+# [X] No topleft hot corner
 
 
 
