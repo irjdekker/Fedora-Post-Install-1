@@ -272,6 +272,6 @@ sudo dnf install -y chrome-gnome-shell
 # [X] Dash to Dock
 # [X] Impatience
 # [X] No topleft hot corner
-
+# [X] Alternatetab
 
 
