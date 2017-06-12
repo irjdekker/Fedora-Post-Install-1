@@ -282,4 +282,5 @@ sudo unzip android-studio-id-*.zip -d /usr/local/
 cd /usr/local/android-studio/bin
 ./studio.sh
 # Install Fedora required dependencies
-sudo dnf install -y zlib.i686 ncurses-libs.i686 bzip2-libs.i686
+sudo dnf install -y zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686
+
