@@ -287,3 +287,20 @@ cd /usr/local/android-studio/bin
 # Install Fedora required dependencies
 sudo dnf install -y zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686
 
+#### GOGLAND ####
+# https://www.jetbrains.com/go/download/
+# Extract and unarchive
+sudo tar -C /usr/local/ -xzf gogland*.tar.gz
+cd /usr/local
+sudo mv Gogland*/ gogland
+# Create a gogland.desktop entry in /usr/local/share/applications/
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gogland
+Icon=/usr/local/gogland/bin/gogland.png
+Exec="/usr/local/gogland/bin/gogland.sh" %f
+Comment=Go is the best!
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=gogland
