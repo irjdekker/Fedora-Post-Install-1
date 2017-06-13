@@ -23,7 +23,9 @@ sudo dnf install -y kernel-devel kernel-headers
 #### RPM FUSION REPO ####
 # Add rpmfusion needed for some proprietary drivers,
 # media codecs, and third party applications (e.g. VLC)
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
+# Also add the Non-Free if not used in a Commercial Setting
+# sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 #### BROADCOM WIRELESS ####
 # Install Wireless packages
@@ -56,6 +58,7 @@ cd ~
 #Instructions can be fournd at: https://www.sublimetext.com/docs/3/linux_repositories.html
 sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sudo dnf install -y sublime-text
 
 #NOTE: Previous instructions:
 # Download Sublime_Text_3 from https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
