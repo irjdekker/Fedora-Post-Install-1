@@ -277,6 +277,12 @@ sudo dnf install -y chrome-gnome-shell
 # [X] No topleft hot corner
 # [X] Alternatetab
 
+#### JAVA (OpenJDK) ####
+# OpenJDK instructions: http://openjdk.java.net/install/
+# JRE is openjdk, development requires devel package
+# Replace ? with appropriate version number
+sudo dnf install -y java-1.?.0-openjdk java-1.?.0-openjdk-devel
+
 #### ANDROID STUDIO #####
 # https://developer.android.com/studio/index.html
 # Extract zipped folder to appropriate location
