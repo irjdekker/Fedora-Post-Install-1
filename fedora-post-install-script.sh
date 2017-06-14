@@ -105,6 +105,12 @@ sudo tar -C /usr/local -xzf go*.tar.gz
 # Install GoSublime. CTRL/CMD + SHFT + P => 'install' => GoSublime
 # GoSublime still requres the GOPATH variable
 
+#### GIT SETUP ####
+# Add global config values
+git config --global user.name "Taylor Frey"
+git config --global user.email #"<email address here"
+git config --global core.editor subl #must have sublime install first
+
 #### FONTS ####
 # Download font families from https://fonts.google.com
 # Roboto [Mono] - Apache 2.0 License
