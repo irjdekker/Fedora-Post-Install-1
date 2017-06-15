@@ -316,3 +316,20 @@ Comment=Go is the best!
 Categories=Development;IDE;
 Terminal=false
 StartupWMClass=gogland
+
+#### GITKRAKEN ####
+# Download tar from https://www.gitkraken.com/download
+# Extract and unarchive
+sudo tar -xzf gitkraken*.tar.gz -C /usr/local/
+# Create a gitkraken.desktop entry in /usr/local/share/applications/
+[Desktop Entry]
+Version=1.2.8
+Type=Application
+Name=GitKraken
+Icon=
+Exec="/usr/local/gitkraken/gitkraken" %f
+Comment=GitKraken
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=gitkraken
+
