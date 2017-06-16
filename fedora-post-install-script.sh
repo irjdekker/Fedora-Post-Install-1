@@ -333,3 +333,5 @@ Categories=Development;IDE;
 Terminal=false
 StartupWMClass=gitkraken
 
+#### MELD ####
+sudo dnf install -y meld
