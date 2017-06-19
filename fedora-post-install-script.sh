@@ -15,6 +15,10 @@ sudo dnf upgrade # (update is deprecated)
 # Install Kernel Development tools and packages
 sudo dnf install -y kernel-devel kernel-headers
 
+#### SET HOSTNAME ####
+sudo hostnamectl set-hostname fedora.example.com
+sudo systemctl restart systemd-hostnamed
+
 #### FIREFOX ####
 # Preinstalled, but needs settings tweaks
 # Sign in with account to get privacy extensions, bookmarks, and settings
