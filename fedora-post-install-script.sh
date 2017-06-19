@@ -18,6 +18,8 @@ sudo dnf install -y kernel-devel kernel-headers
 #### SET HOSTNAME ####
 sudo hostnamectl set-hostname fedora.example.com
 sudo systemctl restart systemd-hostnamed
+# Verify change:
+hostnamectl status
 
 #### FIREFOX ####
 # Preinstalled, but needs settings tweaks
