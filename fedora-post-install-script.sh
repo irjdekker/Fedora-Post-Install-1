@@ -341,3 +341,7 @@ StartupWMClass=gitkraken
 
 #### MELD ####
 sudo dnf install -y meld
+
+#### DNS RESOLUTION ####
+# If DNS is failing due to DHCP for Chrome/Firefox, but works for dig and nslookup, need to modify /etc/nsswitch.conf
+# Under the entry `hosts` move the value for 'dns' before the value [NOTFOUND=return]
