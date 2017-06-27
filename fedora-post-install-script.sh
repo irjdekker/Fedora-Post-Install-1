@@ -288,6 +288,8 @@ sudo dnf install -y chrome-gnome-shell
 # [X] Impatience (.50 speed)
 # [X] No topleft hot corner
 # [X] Alternatetab
+# [X] Openweather (Change to Boulder, Colorado, USA)
+# [X] TopIcons Plus
 
 #### JAVA (OpenJDK) ####
 # OpenJDK instructions: http://openjdk.java.net/install/
