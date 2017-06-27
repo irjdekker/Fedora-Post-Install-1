@@ -7,14 +7,9 @@ Greshman Palace from: https://us.reddit.com/r/MostBeautiful/comments/63rbes/the_
 - Photograph by Simon Alexander
 - Hosted at https://imgur.com/T2zpqeB
 
-
 Conky from: https://github.com/N2f3/Tree-Conky
 
 TODO:
-Fix / Finalize Conky
-
-Bumblebee? Nvidia outright?
-
-Rework the script from simple list into interactive process
-
-PATH seems to be added twice for GO section (Move to local user profile instead of global profile.d?)
+- [] Rework the script from simple list into interactive process
+- [] Add Conky?
+- [] Bumblebee? Nvidia outright?
