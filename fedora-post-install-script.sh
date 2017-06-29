@@ -347,3 +347,11 @@ sudo dnf install -y meld
 #### DNS RESOLUTION ####
 # If DNS is failing due to DHCP for Chrome/Firefox, but works for dig and nslookup, need to modify /etc/nsswitch.conf
 # Under the entry `hosts` move the value for 'dns' before the value [NOTFOUND=return]
+
+#### VNC Client ####
+# Using RealVNC's Viewer Client from https://www.realvnc.com/download/viewer/
+# Choose the 64 bit GZ (GZ x64) and verify the shasum 
+shasum -a 256 ~/Downloads/VNC*.gz
+cd Downloads
+gunzip VNC*.gz
+./VNC* ip::port #./VNC* 10.0.0.2::5900 (5900 default port, but 1-99 are displays... so 5904, for example)
