@@ -307,6 +307,13 @@ cd /usr/local/android-studio/bin
 # Install Fedora required dependencies
 sudo dnf install -y zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686 glibc.i686 glibc-devel.i686 libstdc++.i686
 
+#### INOTIFY ####
+#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+sudo vim /etc/sysctl.d/jetbrains.conf
+# Add the following line:
+# fs.inotify.max_user_watches = 524288
+sudo sysctl -p --system
+
 #### GOGLAND ####
 # https://www.jetbrains.com/go/download/
 # Extract and unarchive
