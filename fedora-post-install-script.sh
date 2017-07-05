@@ -325,6 +325,24 @@ Categories=Development;IDE;
 Terminal=false
 StartupWMClass=gogland
 
+#### POSTMAN ####
+# hhttps://www.getpostman.com/
+# Extract and unarchive
+sudo tar -C /usr/local/ -xzf postman*.tar.gz
+cd /usr/local
+sudo mv Postman*/ postman
+# Create a postman.desktop entry in /usr/local/share/applications/
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Postman
+Icon=/usr/local/postman/resources/app/assets/icon.png
+Exec="/usr/local/postman/Postman" %f
+Comment=Postman makes API easy.
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=postman
+
 #### GITKRAKEN ####
 # Download tar from https://www.gitkraken.com/download
 # Extract and unarchive
