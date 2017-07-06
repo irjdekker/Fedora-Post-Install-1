@@ -282,8 +282,8 @@ sudo docker run hello-world
 sudo dnf copr enable region51/chrome-gnome-shell
 sudo dnf install -y chrome-gnome-shell
 # [ ] Turn off Fedora label
-# [X] Applications Menu
-# [X] Window List (Show on all monitors)
+# [ ] Applications Menu
+# [ ] Window List (Show on all monitors)
 # [X] Dash to Dock (Show on all monitors, Icon size limit: 32, Shrink the dash)
 # [X] Impatience (.50 speed)
 # [X] No topleft hot corner
