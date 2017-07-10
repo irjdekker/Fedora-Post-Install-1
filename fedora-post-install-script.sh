@@ -290,6 +290,7 @@ sudo dnf install -y chrome-gnome-shell
 # [X] Alternatetab
 # [X] Openweather (Change to Boulder, Colorado, USA)
 # [X] TopIcons Plus
+# [X] Caffeine
 
 #### JAVA (OpenJDK) ####
 # OpenJDK instructions: http://openjdk.java.net/install/
