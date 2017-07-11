@@ -36,14 +36,64 @@ systemctl restart network    #[On SystemD]
 ssh-keygen -b 4096
 # Push public key to server
 ssh-copy-id example_user@203.0.113.10
+# Validate by logging in
+ssh example_user@203.0.113.10
+
 # Harden sshd
 sudo vi /etc/ssh/sshd_config
 # PermitRootLogin no
 # PasswordAuthentication no
 # AddressFamily inet #inet6 if enable ipv6
+# Validate by logging in
+ssh example_user@203.0.113.10
+
 
 ##### SET HOSTNAME #####
 sudo hostnamectl set-hostname fedora.example.com
 sudo systemctl restart systemd-hostnamed
 # Verify change:
 hostnamectl status
+
+##### ALIAS #####
+vi ~/.bashrc
+alias ll='ls -lAFh'
+
+##### FORMAT DISK #####
+# Taken from https://www.techwalla.com/articles/format-linux-disk
+# List all disks
+fdisk -l
+# Unmount concerned disk
+umount /dev/sdb
+# Edit partitioning
+fdisk /dev/sdb
+fdisk> d #Deletes partition
+fdisk> n #New partition
+fdisk> <Enter> #Or 1
+fdisk> <Enter> #Start location, likely 2048
+fdisk> <Enter> #End location, likely maxsize-2048
+fdisk> t #Edit type
+fdisk> 83 #Linux filesystem
+fdisk> w #Write filesystem
+fdisk> <Enter>
+#Format new partition
+mkfs.ext4 /dev/sdb1
+
+
+##### AUTOMOUNT MEDIA #####
+# Make new folder
+mkdir /media/newdrive #(or whatever name you prefer)
+# Mount drive
+mount /dev/sdb1 /media/newdrive
+# Edit fstab
+vi /etc/fstab
+# Add line: /dev/sdb1 /media/newdrive ext4 defaults 1 2
+
+##### PLEX #####
+# Download and copy over
+# https://www.plex.tv/downloads/
+# Verify checksums
+shasum -a 1 plex*
+# Copy from client to server
+scp ~/Downloads/plexmediaserver*.rpm example_user@203.0.113.10:~/
+# Install Plex
+ssh example_user@203.0.113.10
