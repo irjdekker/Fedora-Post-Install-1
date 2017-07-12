@@ -110,5 +110,22 @@ sudo vi /etc/rum.repos.d/plex.repo
 sudo shutdown -r now
 # Once back up, verify plexmediaserver is up and running
 ps -eFH | grep plexmediaserver # There will likely be multiple entres
-# Enable port (default is 32400 if not changed) access for plex through firewalld
+# Be sure to open up the correct port (Default is 32400 if it hasn't been changed)
+
+##### FIREWALLD #####
+# Instructions from https://www.rootusers.com/how-to-open-a-port-in-centos-7-with-firewalld/
+# Start Firewall
+sudo systemctl start firewalld.service
+# Stop Firewall
+sudo systemctl stop firewalld.service
+# List ports
+sudo firewall-cmd --list-ports
+# Add specific port
+sudo firewall-cmd --permanent --add-port=32400/tcp
+# Reload after changes
+sudo firewall-cmd --reload
+# List services
+sudo firewall-cmd --list-services
+# Add service
+sudo firewall-cmd --permanent --add-service=http
 
