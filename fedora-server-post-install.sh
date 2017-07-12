@@ -1,5 +1,8 @@
 #WARNING: I am no server admin. My hardening skills are minimal, at best. Don't rely on this for production.
 
+##### ALWAYS UPDATE FIRST AND OFTEN #####
+sudo dnf upgrade
+
 ##### STATIC IP #####
 # Set static ip address
 # https://www.tecmint.com/set-add-static-ip-address-in-linux/
@@ -78,7 +81,6 @@ fdisk> <Enter>
 #Format new partition
 mkfs.ext4 /dev/sdb1
 
-
 ##### AUTOMOUNT MEDIA #####
 # Make new folder
 mkdir /media/newdrive #(or whatever name you prefer)
@@ -89,11 +91,24 @@ vi /etc/fstab
 # Add line: /dev/sdb1 /media/newdrive ext4 defaults 1 2
 
 ##### PLEX #####
+# More instructions at https://support.plex.tv/hc/en-us/articles/200288586-Installation
+# Repo updates: https://support.plex.tv/hc/en-us/articles/235974187
 # Download and copy over
 # https://www.plex.tv/downloads/
 # Verify checksums
 shasum -a 1 plex*
 # Copy from client to server
 scp ~/Downloads/plexmediaserver*.rpm example_user@203.0.113.10:~/
-# Install Plex
+# Sign in to server (remote or local)
 ssh example_user@203.0.113.10
+# Install plex
+sudo dnf install plexmediaserver*.rpm
+# Enable repo for updates
+sudo vi /etc/rum.repos.d/plex.repo
+# Change enabled=0 to enabled=1
+# Reboot
+sudo shutdown -r now
+# Once back up, verify plexmediaserver is up and running
+ps -eFH | grep plexmediaserver # There will likely be multiple entres
+# Enable port (default is 32400 if not changed) access for plex through firewalld
+
