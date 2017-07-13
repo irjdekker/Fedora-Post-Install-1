@@ -33,6 +33,9 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 # Also add the Non-Free if not used in a Commercial Setting
 # sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+#### RED HAT RPM CONFIG ####
+sudo dnf install redhat-rpm-config
+
 #### BROADCOM WIRELESS ####
 # Install Wireless packages
 # sudo dnf install -y broadcom-wl
@@ -374,7 +377,31 @@ sudo dnf install -y meld
 # If DNS is failing due to DHCP for Chrome/Firefox, but works for dig and nslookup, need to modify /etc/nsswitch.conf
 # Under the entry `hosts` move the value for 'dns' before the value [NOTFOUND=return]
 
+#### PIP ####
+# Pip is likely already installed, just upgrade
+sudo pip install --upgrade pip
+
+#### MULLVAD VPN ####
+# Download the source tar.gz from https://www.mullvad.net/download/
+# Instructions from https://www.mullvad.net/guides/installing-mullvad-client-linux/
+sudo pip install mullvad*.tar.gz
+sudo dnf install python-appdirs python-ipaddr python-netifaces python-psutil wxPython
+sudo chmod 755 /etc/openvpn/update-resolv-conf
+# Add environment variable to .bash_profile as below
+export MULLVAD_USE_GTK3=yes
+# TODO Create a desktop icon, but until then it can be launched via command line `mullvad`
+
+
+#I
+#sudo dnf install redhat-rpm-config
+#sudo dnf install python-devel # Needed for Python
+#sudo dnf install gcc gcc-c++ # Need the C++ compiler
+#sudo dnf install gtk3 gtk3-devel # Need the GTK environment for UI tests # gtk2 gtk2-devel
+#sudo dnf install freeglut freeglut-devel # Needed for OpenGL
+#sudo dnf install gstreamer gstreamer-devel gstreamer-plugins-base-devel
+
 #### VNC Client ####
+# WIP, this is not working yet. Not sure the issues.
 # Using RealVNC's Viewer Client from https://www.realvnc.com/download/viewer/
 # Choose the 64 bit GZ (GZ x64) and verify the shasum 
 shasum -a 256 ~/Downloads/VNC*.gz
