@@ -426,6 +426,8 @@ make
 sudo make install
 # While in BETA be sure to enter the registration code
 # It can be found at: http://www.makemkv.com/forum2/viewtopic.php?f=5&t=1053
+# As of this writing it is:
+# T-QWvg95pFZPQjcwoog2PxbrAlj1Ml279L3GogBfgVENxFW6fMTGgrW@RPN6aPAVH31O
 
 #### HANDBRAKE ####
 # Negativo to the rescue
