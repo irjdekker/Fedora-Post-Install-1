@@ -391,15 +391,6 @@ sudo chmod 755 /etc/openvpn/update-resolv-conf
 export MULLVAD_USE_GTK3=yes
 # TODO Create a desktop icon, but until then it can be launched via command line `mullvad`
 
-
-#I
-#sudo dnf install redhat-rpm-config
-#sudo dnf install python-devel # Needed for Python
-#sudo dnf install gcc gcc-c++ # Need the C++ compiler
-#sudo dnf install gtk3 gtk3-devel # Need the GTK environment for UI tests # gtk2 gtk2-devel
-#sudo dnf install freeglut freeglut-devel # Needed for OpenGL
-#sudo dnf install gstreamer gstreamer-devel gstreamer-plugins-base-devel
-
 #### VNC Client ####
 # WIP, this is not working yet. Not sure the issues.
 # Using RealVNC's Viewer Client from https://www.realvnc.com/download/viewer/
@@ -408,3 +399,28 @@ shasum -a 256 ~/Downloads/VNC*.gz
 cd Downloads
 gunzip VNC*.gz
 ./VNC* ip::port #./VNC* 10.0.0.2::5900 (5900 default port, but 1-99 are displays... so 5904, for example)
+
+#### MAKEMKV ####
+# Steps taken and modified from https://linuxconfig.org/how-to-install-makemkv-on-fedora-linux
+# Tarballs available at: http://www.makemkv.com/forum2/viewtopic.php?f=3&t=224
+# Install prereqs
+# RPM Fusion needed, see the entry near the top
+sudo dnf group install "C Development Tools and Libraries"
+sudo dnf group install "Development Tools"
+sudo dnf install zlib-devel openssl-devel expat-devel ffmpeg ffmpeg-devel qt5-qtbase-devel
+# Download makemkv
+cd Downloads
+mkdir makemkv
+mv makemkv-* makemkv/
+cd makemkv
+tar -xpzf makemkv-bin-*.tar.gz
+tar -xpzf makemkv-oss-*.tar.gz
+# Install makemkv (oss first)
+cd makemkv-oss-1.10.5
+./configure
+make
+sudo make install
+# Install bin next
+cd ../makemkv-bin-1.10.5
+make
+sudo make install
