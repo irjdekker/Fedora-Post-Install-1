@@ -424,3 +424,19 @@ sudo make install
 cd ../makemkv-bin-1.10.5
 make
 sudo make install
+# While in BETA be sure to enter the registration code
+# It can be found at: http://www.makemkv.com/forum2/viewtopic.php?f=5&t=1053
+
+#### HANDBRAKE ####
+# Negativo to the rescue
+# https://negativo17.org/handbrake/
+suudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
+sudo dnf -y install HandBrake-gui HandBrake-cli libdvdcss
+# If haven't done MakeMKV yet:
+sudo dnf -y install makemkv
+
+
+# Download the source from: https://handbrake.fr/downloads.php
+./configure
+cd ./build
+make
