@@ -432,7 +432,7 @@ sudo make install
 #### HANDBRAKE ####
 # Negativo to the rescue
 # https://negativo17.org/handbrake/
-suudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
+sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
 sudo dnf -y install HandBrake-gui HandBrake-cli libdvdcss
 # If haven't done MakeMKV yet:
 sudo dnf -y install makemkv
