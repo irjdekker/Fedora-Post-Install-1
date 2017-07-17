@@ -301,24 +301,17 @@ sudo dnf install -y chrome-gnome-shell
 # Replace ? with appropriate version number
 sudo dnf install -y java-1.?.0-openjdk java-1.?.0-openjdk-devel
 
-#### ANDROID STUDIO #####
-# https://developer.android.com/studio/index.html
-# Extract zipped folder to appropriate location
-sudo unzip android-studio-id-*.zip -d /usr/local/
-# Run installation script
-cd /usr/local/android-studio/bin
-./studio.sh
-# Install Fedora required dependencies
-sudo dnf install -y zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686 glibc.i686 glibc-devel.i686 libstdc++.i686
-
-#### INOTIFY ####
-#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
-sudo vim /etc/sysctl.d/jetbrains.conf
-# Add the following line:
-# fs.inotify.max_user_watches = 524288
-sudo sysctl -p --system
+#### JETBRAINS TOOLS #### 
+# All tools can be managed through the Toolbox App
+# Download from: https://www.jetbrains.com/toolbox/app/
+# Extract
+cd ~/Downloads
+tar -xzf jetbrains-toolbox*.tar.gz
+cd jetbrains-toolbox*/
+./jetbrains-toolbox
 
 #### GOGLAND ####
+# No longer necessary, just use the Toolbox App
 # https://www.jetbrains.com/go/download/
 # Extract and unarchive
 sudo tar -C /usr/local/ -xzf gogland*.tar.gz
@@ -335,6 +328,24 @@ Comment=Go is the best!
 Categories=Development;IDE;
 Terminal=false
 StartupWMClass=gogland
+
+#### ANDROID STUDIO #####
+# No longer necessary, just use the Toolbox App
+# https://developer.android.com/studio/index.html
+# Extract zipped folder to appropriate location
+sudo unzip android-studio-id-*.zip -d /usr/local/
+# Run installation script
+cd /usr/local/android-studio/bin
+./studio.sh
+# Install Fedora required dependencies
+sudo dnf install -y zlib.i686 ncurses-libs.i686 bzip2-libs.i686 libgcc.i686 glibc.i686 glibc-devel.i686 libstdc++.i686
+
+#### INOTIFY ####
+#https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+sudo vim /etc/sysctl.d/jetbrains.conf
+# Add the following line:
+# fs.inotify.max_user_watches = 524288
+sudo sysctl -p --system
 
 #### POSTMAN ####
 # hhttps://www.getpostman.com/
