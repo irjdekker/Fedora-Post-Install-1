@@ -448,8 +448,24 @@ sudo dnf -y install HandBrake-gui HandBrake-cli libdvdcss
 # If haven't done MakeMKV yet:
 sudo dnf -y install makemkv
 
-
 # Download the source from: https://handbrake.fr/downloads.php
 ./configure
 cd ./build
 make
+
+#### POWERLINE ####
+# https://powerline.readthedocs.io/en/latest/installation.html
+# Powerline
+sudo pip install powerline-status
+# Powerline Fonts
+cd ~/Downloads
+# Download font/conf
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+# Move / Install font
+mkdir .local/share/fonts
+mv PowerlineSymbols.otf ~/.local/share/fonts/
+fc-cache -vf ~/.local/share/fonts/
+# Move font config
+mkdir -p ~/.config/fontconfig/conf.d/
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
