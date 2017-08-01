@@ -11,6 +11,10 @@
 # Update current settings and package listings
 sudo dnf upgrade # (update is deprecated)
 
+#### MORE THAN 3 KERNELS ####
+# Edit the file located at /etc/dnf/dnf.conf and set the following to the desired amount:
+installonly_limit=7
+
 #### DEVELOPMENT TOOLS ####
 # Install Kernel Development tools and packages
 sudo dnf install -y kernel-devel kernel-headers
